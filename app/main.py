@@ -11,7 +11,9 @@ class Distance:
     def __repr__(self) -> str:
         return f"Distance(km={self.km})"
 
-    def _get_value(self, other: Distance | int | float) -> int | float | type(NotImplemented):
+    def _get_value(self,
+                   other: Distance | int | float
+                   ) -> int | float | type(NotImplemented):
         if isinstance(other, Distance):
             return other.km
         elif isinstance(other, (int, float)):
